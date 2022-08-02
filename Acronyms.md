@@ -121,6 +121,9 @@ Hypertext Transfer Protocol
 ### FTP
 File Transfer Protocol (old, before HTTP)
 
+### AMQP
+Advance Message Queuing Protocol
+
 
 ## Files
 
