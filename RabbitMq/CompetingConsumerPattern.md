@@ -1,7 +1,7 @@
 ﻿## Competing Consumer Pattern
 
 This is a common messaging pattern. It is also known as "Work Queue".
-It is often used to distribute time consuming tasks among multiple workers.
+It is often used to distribute time consuming tasks among multiple workers. (Share messages across multiple consumers)
 This concept is important in web applications, where it is usually impossible to wait for a long task to complete during a short HTTP request window.
 
 Another benefit of this approach is a scalability.
