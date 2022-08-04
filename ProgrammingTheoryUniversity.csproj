@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include=".NET\1.Introduction.md" />
+    <None Include=".NET\2.Memory.md" />
+    <None Include=".NET\CommonLanguageInfrastructure.md" />
+  </ItemGroup>
+	
 </Project>
