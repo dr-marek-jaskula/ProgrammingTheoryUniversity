@@ -16,6 +16,7 @@ It is important to set:
 ```csharp
 channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
 ```
+
 It limits the number of unacknowledged messages on a channel (or connection) when consuming (aka "prefetch count"). 
 prefetchCount = 1 -> This tells RabbitMQ not to give more than one message to a worker at a time. Or, in other words, don't dispatch a new message to a worker until it has processed and acknowledged the previous one. Instead, it will dispatch it to the next worker that is not still busy.
 prefetchSize is the parameter to control unacknowledged messages size. A value of 0 is treated as infinite.

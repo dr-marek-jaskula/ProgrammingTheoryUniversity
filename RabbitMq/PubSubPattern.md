@@ -1,4 +1,4 @@
-﻿## PubSub Pattern
+﻿## Publisher/Subscriber Pattern
 
 This pattern is about delivering messages to multiple consumers. 
 This is almost the opposite of a Competing Consumer pattern. We send the same message to multiple consumers.

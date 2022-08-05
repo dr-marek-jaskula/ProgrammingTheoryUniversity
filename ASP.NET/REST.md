@@ -32,3 +32,10 @@ We use REST primarily as a way to communicate between computer systems on the Wo
 
 This is an API created using the REST architecture.
 It enables web application that are build on various programming language to communicate with each other.
+
+REST API abides by the following rules:
+
+- Statelessness: Systems aligning with the REST paradigm are bound to become stateless. A constraint is applied by using resources instead of commands, and they are nouns of the web that describe any object, document, or thing to store/send to other resources.
+- Cacheable: Cache helps servers to mitigate some constraints of statelessness. It is a critical factor that has improved the performance of modern web applications. Caching not only enhances the performance on the client-side but also scales significant results on the server-side.
+- Decoupled: REST is a distributed approach, where client and server applications are decoupled from each other. Irrespective of where the requests are initiated, the only information the client application knows is the Uniform Resource Identifier (URI) of the requested resource.
+- Layered: A Layered system makes a REST architecture scalable. As REST API is layered, it should be designed such that neither Client nor Server identifies its communication with end applications or an intermediary.
