@@ -11,7 +11,7 @@ It is specified when publishing a message onto RabbitMQ. It uses "reply_to" prop
 
 ```
 	  -----> exchange -----> Request Queue ----->
-Client											Server
+Client								Server
 	  <--- Reply Queue <--- Default Exchange <---
 ```
 
