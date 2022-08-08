@@ -17,6 +17,8 @@ Client							Server
 
 There reply_to=Reply Queue.
 
+Naming: client and server, because both sends requests and replies.
+
 #### Main problem
 
 If we have multiple request and replies, we must know which reply is for what request. 
@@ -28,11 +30,7 @@ Basic tags:
 - message_id=ABCDEF
 - correlation_id=123456
 
-Two approaches:
+Approaches:
 - Client uses "message_id" and the sever uses "correlation_id" with the same value as "message_id"
 - Client and server use "message_id" with the same values.
-
-My preference:
-- Client uses "message_id" and the server uses "correlation_id" with the same value as "message_id"
-
-
+- Client and server use "correlation_id" with the same values.
