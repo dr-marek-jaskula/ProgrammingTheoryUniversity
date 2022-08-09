@@ -75,11 +75,6 @@ channel.TxRollback();
 ```
 - Persisted Messages
 
-#### Queue properties
-
-durability (will survive restates):
-durable = true
-
 #### Publish properties:
 
 Mandatory (give us a notification of failure)

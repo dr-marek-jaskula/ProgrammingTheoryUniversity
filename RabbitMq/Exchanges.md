@@ -61,3 +61,33 @@ The algorithm is as follows:
 - If it is equal for all, like "routing_key=1", then the same amount of messages is passed to each queue
 - If one of binding is like "routing_key=2" and other "routing_key=1", then if will receive two time more messages then other queues
 
+## Alternate Exchange
+
+It is an extension to the AMQP model created by RabbitMQ to handle unreadable messages.
+
+This exchange is binded to other "main exchange" (just an exchange). 
+
+If a message is not send to any queue, because for instance the routing key does not fit any binding key, then it will be send to the alternate exchange.
+So if is an exchange to handle all messages that do not fit the bindings.
+
+An alternate exchange can be of any type like a Direct or Topic. Nevertheless, the most common one for alternate is a fanout exchange.
+
+A common example is to process such message through the alternate exchange to the queues that are connected to the Logging Service (to log the unreadable message).
+
+## Dead Letter Exchange (DL Exchange)
+
+It is quite similar to alternate exchange. It is also an extension to AMQP specification.
+
+Like a alternate exchange it is just a normal exchange.
+
+Any message that is rooted to the queue, but cannot be delivered (for instance it is rejected or expires for some reason) can be send to the Dead Letter Exchange.
+
+Then we can do whatever we want. A common example again is to process the message to the Logging Server or Learning Server to examine why it was not processed to the consumer.
+
+##### Unreadable messages are delivered to Alternate Exchange 
+##### Expired or rejected messages are delivered to Dead Letter Exchange 
+
+
+
+
+

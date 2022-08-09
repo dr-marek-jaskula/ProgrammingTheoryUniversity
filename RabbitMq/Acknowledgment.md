@@ -1,0 +1,27 @@
+﻿## Acknowledgments
+
+- Auto Acknowledgment
+	- As soon as the consumer reads the message off the queue, the consumer acknowledgments to the broker that it has successfully read the message.
+	- The broker can then remove that message from the queue, even if the consumer does not successfully process it.
+	- This is sufficient in many simple cases
+- basic_ack
+	- We explicitly implement the acknowledgment functionality
+	- After the consumer finishes consuming the message we send acknowledgment
+	- basic_ack accepts a parameter called "delivery_tag". It is auto incrementing number for that particular consumer that indicates what message it has now received.
+		- The first message has the delivery_tag equal to zero, the second one to one, third to two and so on.
+		- Delivery tag can be used when using the basic acknowledgment method frame to tell RabbitMQ what message we are acknowledging.
+		- Delivery tags are scoped per consumer, so when we are sending a basic acknowledgment it needs to be sent on the same channel that the message has been received
+	- We can add "multiple" boolean option. 
+		- This allow us to acknowledge multiple messages at once. 
+			- For instance if we received 5 messages (delivery tags from 0 to 4). Assume that 5th message (delivery tag 4) has "multiple" set to true. If we did not acknowledge any of messages, but then we acknowledge message with delivery tag 4, then all are assumed to be acknowledge.
+- basic_reject 
+	- This is similar to the basic_act but instead of telling that we have successfully processed the message, we tell that we have not processed the message or we cannot to this.
+	- It should not be used as a routing mechanism.
+	- We cannot reject multiple messages
+	- It takes a delivery_tag to identify the message 
+	- We can add "requeue" boolean option. 
+		- The rejected message goes back to the queue. If we have only one consumer, it can lead to the infinite loop.
+- besic_nack
+	- It is like reject with other options
+	- It takes delivery_tag
+	- It have both "requeue" and "multiple". We can reject multiple messages at once
