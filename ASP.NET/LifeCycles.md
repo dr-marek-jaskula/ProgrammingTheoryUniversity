@@ -35,3 +35,7 @@ It should be used with caution, because it can be shared between different threa
 
 If we register multiple singletons of the same interface, the last one is used and the other ones are hidden. 
 To verify this statement we can inject (by Dependency Injection) the IEnumerable of a singleton type.
+
+## database cotntext lifetime
+
+The service instance is created for each request and passed to the controller to perform a unit-of-work before being disposed when the request ends.
