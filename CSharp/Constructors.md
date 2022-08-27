@@ -105,3 +105,7 @@ public class MyClass
     public MyClass() : this(null, null) { }
 }
 ```
+
+## Internal constructor 
+
+Internal constructor is used mostly in the Domain Driven Design approach, to prevent calling the constructor from the external project.
