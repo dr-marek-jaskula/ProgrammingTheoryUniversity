@@ -24,10 +24,14 @@ General naming conversion:
 My naming conversion:
 \<MethodToTestName\>_Should\<ExpectedResult\>_When\<TestScenario\>
 
+> GetById_ShouldReturnProduct_WhenProductExists
+
 For parameters and results:
 - expected
 - actual
+
 or
+
 - expectedResult/expectedUsers/etc.
 - actualResult/actualUsers/etc.
 
@@ -36,3 +40,9 @@ or
 System Under Test is the system we test.
 
 For instance, it can be a "calculator" class.
+
+## Mock
+
+Mocks should end with "Mock" suffix:
+
+> _productRepositoryMock

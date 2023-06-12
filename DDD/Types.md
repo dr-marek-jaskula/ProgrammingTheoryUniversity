@@ -11,13 +11,13 @@ Rich types are types with behavior and usually implicit validation.
 ## Entities 
 
 - They are types with an identity. 
-    - identity is an additional property that defines and distuigish them.
+    - identity is an additional property that defines and distinguish them.
 - They can exist on its own. 
-- They are muttable 
+- They are mutable 
 - We should not add any behavior to the entity
 - They can be in a invalid state, so we should remember about validation
 
-For example: Person, Organisation
+For example: Person, Organization
 
 ## Value Objects
 
