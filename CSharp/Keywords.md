@@ -34,7 +34,7 @@ We can use **readonly** for reference types
 - can be used with **using** to since C# 6.0 to use the static members of a certain namespace without specifying a type name.
   - Example: use "using static System.Math;" for static math methods or constants.
 
-- can be used for class members and classes itself, to determines that the object is known at compile-time.
+- can be used for class members and classes itself, to determines that the object is known at compile-time or created at runtime by static constructor.
   - static method or variable will be reachable without creating an instance of a class. Therefore, the single copy of an variable is created.
   - a static method cannot use the non-static members of a class. Therefore cannot use **this** keyword.
   - static class can contain only static members.

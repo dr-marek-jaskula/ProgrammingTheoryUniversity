@@ -33,7 +33,6 @@ It is possible to create an abstract partial class.
 By default classes are not sealed.
 We use **sealed** keyword to mark the sealed class.
 
-- Sealed class can not be instantiated.
 - Abstract classes can not be sealed
 - Sealed classes can be extended
 

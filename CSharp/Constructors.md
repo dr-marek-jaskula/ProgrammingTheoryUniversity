@@ -10,6 +10,7 @@ Constructor types:
 - Copy constructor
 - Static constructor
 - Private constructor
+- Internal constructor
   
 ## Default constructor
 
@@ -109,3 +110,16 @@ public class MyClass
 ## Internal constructor 
 
 Internal constructor is used mostly in the Domain Driven Design approach, to prevent calling the constructor from the external project.
+
+## Primary constructor 
+
+Primary constructor can be used to simply using the constructor. For now we can use this syntax only for records, but since c# 12 we will be able to use them
+for normal classes.
+
+```csharp
+public class Person(string name)
+{
+    public string Name { get; set; } = name;
+    public override string ToString() => name;
+}
+```

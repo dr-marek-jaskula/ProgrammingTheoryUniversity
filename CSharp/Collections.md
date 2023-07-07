@@ -12,7 +12,7 @@ The elements can be of different dimensions and sizes.
 
 ArrayList is flexible in terms of number of elements. We can add elements to them.
 ArrayList is not strongly typed: we can add elements of different types to it:
-> ArrayList myList - new(); myList.Add(1); myList.Add("Example"); myList.Add(true);"
+> ArrayList myList = new(); myList.Add(1); myList.Add("Example"); myList.Add(true);"
 
 The ArrayList performance is worse then Array performance, because of boxing.
 
