@@ -41,3 +41,14 @@ client web app -> Gateway-Web ->
 2. -> serviceD
 3. -> serviceC
 4. -> serviceG
+
+## Main Features of Gateways (use Ocelot)
+
+1. Routing
+2. Request and Response Aggregation
+3. Load Balancing
+4. Authentication
+5. Authorization
+6. Throttling
+7. Logging and Tracing
+8. Custom Middleware
